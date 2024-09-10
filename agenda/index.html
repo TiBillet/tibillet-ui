@@ -26,7 +26,9 @@
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav nav-fill me-auto">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href=".">Agenda</a>
+            <a class="nav-link active" aria-current="page" href=".">
+              Agenda partagé
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="."> Appels à volontaires <span class="badge rounded-pill bg-info"> 7 <span
@@ -99,14 +101,21 @@
     <!-- search and filtering -->
     <form class="mb-3" action=".">
       <div class="input-group input-group-lg">
+        <button class="btn btn-outline-secondary position-relative" type="button" id="button-addon2" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <i class="bi bi-filter"></i>
+          <span class="position-absolute top-0 start-0 translate-middle p-2 bg-info rounded-circle d-md-none">
+            <span class="visually-hidden">Filtres actifs</span>
+          </span>
+        
+        </button>
+        <button class="btn btn-info d-none d-md-block" type="button" id="button-addon1">
+          Punk <i class="bi bi-x"></i>
+        </button>
         <div class="form-floating">
           <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="un évènement">
           <label for="exampleFormControlInput1" class="form-label"> Je recherche… </label>
         </div>
-        <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-          <i class="bi bi-filter"></i>
-        </button>
         <button class="btn btn-outline-primary" id="inputGroup-sizing-lg" type="submit">
           <i class="bi bi-search"></i>
         </button>
@@ -156,10 +165,10 @@
         See You In The Pit #13: Sheer Terror / Warrior Kids
       </a>
       <div class="col-md text-md-end">
-        <a href="?genre=punk,harcore" class="btn btn-secondary btn-sm mb-1">Punk / Hardcore</a>
-        <a href="?location=secret-place" class="btn btn-secondary btn-sm mb-1">Secret place</a>
-        <a href="?max-price=30" class="btn btn-secondary btn-sm mb-1">&lt;30€</a>
-        <a href="?access=pmr" class="btn btn-secondary btn-sm mb-1">PMR</a>
+        <a href="?genre=punk,harcore" class="btn btn-info btn-sm mb-1">Punk / Hardcore</a>
+        <a href="?location=secret-place" class="btn btn-info btn-sm mb-1">Secret place</a>
+        <a href="?max-price=30" class="btn btn-info btn-sm mb-1">&lt;30€</a>
+        <a href="?access=pmr" class="btn btn-info btn-sm mb-1">PMR</a>
       </div>
     </div>
     <div class="row align-items-center mb-3">
@@ -171,9 +180,9 @@
         Musicale des Beaux-Arts avec Justine Blues Trio
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Blues / Folk</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Place des Beaux-Arts</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Gratuit</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
       </div>
     </div>
     <div class="row align-items-center mb-3">
@@ -185,9 +194,9 @@
         DJ Niko Batik
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Techno</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Coxx</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Gratuit</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Techno</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Coxx</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
       </div>
     </div>
     <div class="row align-items-center mb-3">
@@ -199,9 +208,9 @@
         Session Jam
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Éclectique</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">La Tendresse</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Gratuit</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Éclectique</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">La Tendresse</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
       </div>
     </div>
     <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -216,9 +225,9 @@
         Musicale des Beaux-Arts avec Justine Blues Trio
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Blues / Folk</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Place des Beaux-Arts</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Gratuit</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
       </div>
     </div>
     <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -233,9 +242,9 @@
         Dimanche Swing
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Jazz</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Le Réservoir</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Gratuit</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Jazz</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Le Réservoir</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
       </div>
     </div>
     <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -250,9 +259,9 @@
         Soirée Clubbing
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Électro</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Antirouille</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">&lt;20€</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Électro</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Antirouille</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">&lt;20€</a>
       </div>
     </div>
     <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -267,9 +276,9 @@
         See You In The Pit #14: Lifecrusher / June Gloom / Citrus
       </a>
       <div class="col-md text-md-end">
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Noise / Shoegaze</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Secret place</a>
-        <a href="#" class="btn btn-secondary btn-sm mb-1">Gratuit</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Noise / Shoegaze</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Secret place</a>
+        <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
       </div>
     </div>
 
@@ -277,6 +286,8 @@
       <a href="#" class="btn btn-outline-primary d-block d-sm-inline">Plus d'évènements</a>
     </p>
   </main>
+
+  <!-- footor -->
   <footer class="bg-secondary-subtle">
     <div class="container-lg py-5">
       <div class="row">
