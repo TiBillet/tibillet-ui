@@ -45,10 +45,10 @@ def make_dirs(path):
 active_link = 'active" aria-current="page'
 
 agenda = dict(
-    assets_path = '../assets',
-    agenda_link_class = active_link,
+    base_url = '..',
     page_title = 'Agenda',
     page_content = read('templates/agenda/index.html'),
+    agenda_link_class = active_link,
 )
 
 # build
