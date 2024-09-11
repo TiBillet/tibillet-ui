@@ -51,10 +51,19 @@ agenda = dict(
     agenda_link_class = active_link,
 )
 
+
+agenda_event = dict(
+    base_url = '../..',
+    page_title = 'See You In The Pit #13: Sheer Terror / Warrior Kids',
+    page_content = read('templates/agenda/event/index.html'),
+)
+
 # build
 
 clean_dir('public')
 
 write('public/agenda/index.html', render('templates/base.html', agenda))
+write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
+
 
 shutil.copytree('assets', 'public/assets')
