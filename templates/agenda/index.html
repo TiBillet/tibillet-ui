@@ -26,11 +26,11 @@
   </div>
 </header>
 
-<section class="container-lg p-3">
+<section class="container-lg p-3 sticky-top bg-body" style="height: fit-content;">
   <!-- search and filtering -->
   <form class="my-3" action=".">
     <div class="input-group input-group-lg">
-      <button class="btn btn-outline-secondary position-relative" type="button" id="button-addon2" data-bs-toggle="offcanvas"
+      <button class="btn btn-outline-secondary position-relative" type="button" id="button-filters" data-bs-toggle="offcanvas"
         data-bs-target="#filterPanel" aria-controls="filterPanel">
         <i class="bi bi-filter"></i>
         <span class="position-absolute top-0 start-0 translate-middle p-2 bg-info rounded-circle d-md-none">
@@ -38,9 +38,11 @@
         </span>
 
       </button>
-      <button class="btn btn-info d-none d-md-block" type="button" id="button-addon1">
-        Punk <i class="bi bi-x"></i>
-      </button>
+      <div id="filterTags" class="btn-group">
+        <button class="btn btn-info d-none d-md-block" type="button" id="button-addon1">
+          Punk <i class="bi bi-x"></i>
+        </button>
+      </div>
       <div class="form-floating">
         <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="un évènement">
         <label for="exampleFormControlInput1" class="form-label"> Je recherche… </label>
@@ -104,6 +106,25 @@
         <option value="place-des-beaux-arts">Place des Beaux-Arts</option>
         <option value="secret-place">Secret place</option>
       </datalist>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkPMR">
+        <label class="form-check-label" for="checkPMR">
+          Accès PMR
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkSubs" checked>
+        <label class="form-check-label" for="checkSubs">
+          Sous-titres
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="checkComCopies" checked>
+        <label class="form-check-label" for="checkComCopies">
+          Tarif solidaire
+        </label>
+      </div>
       <div class="position-absolute bottom-0 start-0 end-0 p-3 ">
         <a href="." class="btn btn-primary d-block">Valider</a>
       </div>
@@ -125,10 +146,10 @@
       See You In The Pit #13: Sheer Terror / Warrior Kids
     </a>
     <div class="col-md-auto text-md-end">
-      <a href="?genre=punk,harcore" class="btn btn-info btn-sm mb-1">Punk / Hardcore</a>
-      <a href="?location=secret-place" class="btn btn-info btn-sm mb-1">Secret place</a>
-      <a href="?max-price=30" class="btn btn-info btn-sm mb-1">&lt;30€</a>
-      <a href="?access=pmr" class="btn btn-info btn-sm mb-1">PMR</a>
+      <a href="?genre=Punk,Hardcore" class="btn btn-info btn-sm mb-1">Punk / Hardcore</a>
+      <a href="?location=Secret place" class="btn btn-info btn-sm mb-1">Secret place</a>
+      <a href="?price-cap=30€ max" class="btn btn-info btn-sm mb-1">30€ max</a>
+      <a href="?accessibility=PMR" class="btn btn-info btn-sm mb-1">PMR</a>
     </div>
   </div>
   <div class="row align-items-center mb-3">
@@ -140,9 +161,9 @@
       Musicale des Beaux-Arts avec Justine Blues Trio
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?genre=Blues,Folk" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
+      <a href="?location=Place des Beaux-Arts" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
     </div>
   </div>
   <div class="row align-items-center mb-3">
@@ -154,9 +175,9 @@
       DJ Niko Batik
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Techno</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Coxx</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?genre=Techno" class="btn btn-info btn-sm mb-1">Techno</a>
+      <a href="?location=Coxx" class="btn btn-info btn-sm mb-1">Coxx</a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
     </div>
   </div>
   <div class="row align-items-center mb-3">
@@ -168,9 +189,9 @@
       Session Jam
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Éclectique</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">La Tendresse</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?genre=Éclectique"" class="btn btn-info btn-sm mb-1">Éclectique</a>
+      <a href="?location=La Tendresse" class="btn btn-info btn-sm mb-1">La Tendresse</a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
     </div>
   </div>
   <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -185,9 +206,9 @@
       Musicale des Beaux-Arts avec Justine Blues Trio
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?genre=Blues,Folk" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
+      <a href="?location=Place des Beaux-Arts" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
     </div>
   </div>
   <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -202,9 +223,9 @@
       Dimanche Swing
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Jazz</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Le Réservoir</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?genre=Jazz" class="btn btn-info btn-sm mb-1">Jazz</a>
+      <a href="?location=Le Réservoir" class="btn btn-info btn-sm mb-1">Le Réservoir</a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
     </div>
   </div>
   <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -219,9 +240,9 @@
       Soirée Clubbing
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Électro</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Antirouille</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">&lt;20€</a>
+      <a href="?genre=Électro" class="btn btn-info btn-sm mb-1">Électro</a>
+      <a href="?location=Antirouille" class="btn btn-info btn-sm mb-1">Antirouille</a>
+      <a href="?price-cbp=10€ max" class="btn btn-info btn-sm mb-1">10€ max</a>
     </div>
   </div>
   <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
@@ -236,9 +257,9 @@
       See You In The Pit #14: Lifecrusher / June Gloom / Citrus
     </a>
     <div class="col-md text-md-end">
-      <a href="#" class="btn btn-info btn-sm mb-1">Noise / Shoegaze</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Secret place</a>
-      <a href="#" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?genre=Noise,Shoegaze" class="btn btn-info btn-sm mb-1">Noise / Shoegaze</a>
+      <a href="?location=Secret place" class="btn btn-info btn-sm mb-1">Secret place</a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
     </div>
   </div>
 
@@ -246,3 +267,5 @@
     <a href="#" class="btn btn-outline-primary d-block d-sm-inline">Plus d'évènements</a>
   </p>
 </main>
+
+<script type="module" src="../assets/js/filter-tags.js"></script>
