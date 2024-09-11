@@ -31,7 +31,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="."> Appels à volontaires <span class="badge rounded-pill bg-info"> 7 <span
+            <a class="nav-link" href="."> Appels à volontaires <span class="badge rounded-pill bg-info text-dark"> 7 <span
                   class="visually-hidden">
                   appels</span>
               </span>
@@ -114,10 +114,10 @@
 
   <section class="container-lg p-3">
     <!-- search and filtering -->
-    <form class="mb-3" action=".">
+    <form class="my-3" action=".">
       <div class="input-group input-group-lg">
         <button class="btn btn-outline-secondary position-relative" type="button" id="button-addon2" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          data-bs-target="#filterPanel" aria-controls="filterPanel">
           <i class="bi bi-filter"></i>
           <span class="position-absolute top-0 start-0 translate-middle p-2 bg-info rounded-circle d-md-none">
             <span class="visually-hidden">Filtres actifs</span>
@@ -138,9 +138,9 @@
     </form>
 
     <!-- filtering panel -->
-    <div class="offcanvas-end offcanvas" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-start offcanvas" tabindex="-1" id="filterPanel" aria-labelledby="filterPanelLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Filtres</h5>
+        <h5 class="offcanvas-title" id="filterPanelLabel">Filtres</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -148,19 +148,50 @@
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" checked>
           <label class="form-check-label" for="flexSwitchCheckDefault">Date de départ</label>
         </div>
-        <input id="startDate" class="form-control" type="date" />
+        <input id="startDate" class="form-control mb-3" type="date" />
         <div class="form-check form-switch mb-3">
           <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckOff1">
           <label class="form-check-label" for="flexSwitchCheckOff1">Date de fin</label>
         </div>
-        <div class="form-floating">
-          <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-            <option selected>Tous</option>
-            <option value="1">Rap</option>
-            <option value="2">Folk</option>
-            <option value="3">Rock</option>
-          </select>
-          <label for="floatingSelect">Genre musical</label>
+        <label for="maxPrice" class="form-label mb-0">Prix maximal</label>
+        <input type="range" class="form-range" list="tickmarks" id="maxPrice">
+        <datalist id="tickmarks">
+          <option value="0" label="gratuit"></option>
+          <option value="5"></option>
+          <option value="10"></option>
+          <option value="20"></option>
+          <option value="30"></option>
+          <option value="50"></option>
+          <option value="75"></option>
+          <option value="100" label="tous"></option>
+        </datalist>
+        <label class="form-label" for="genreSelector">Genre musical</label>
+        <select class="form-select mb-3" id="genreSelector" multiple aria-label="Floating label select example">
+          <option selected>Tous</option>
+          <option value="blues">Blues</option>
+          <option value="eclectique">Éclectique</option>
+          <option value="electro">Électro</option>
+          <option value="folk">Folk</option>
+          <option value="hardcore">Hardcore</option>
+          <option value="jazz">Jazz</option>
+          <option value="noise">Noise</option>
+          <option value="punk">Punk</option>
+          <option value="rap">Rap</option>
+          <option value="rock">Rock</option>
+          <option value="shoegaze">Shoegaze</option>
+          <option value="techno">Techno</option>
+        </select>
+        <div class="form-floating mb-3">
+          <input list="locationData" type="text" class="form-control" id="floatingInput" placeholder="Tous">
+          <label for="floatingInput">Lieu</label>
+        </div>        
+        <datalist id="locationData">
+          <option value="coxx">Coxx</option>
+          <option value="place-des-beaux-arts">Place des Beaux-Arts</option>
+          <option value="secret-place">Secret place</option>
+        </datalist>
+        <div class="position-absolute bottom-0 start-0 end-0 p-3 ">
+          <a href="." class="btn btn-primary d-block">Valider</a>
         </div>
       </div>
     </div>
@@ -179,7 +210,7 @@
       <a href="#" class="col fs-5 mb-3">
         See You In The Pit #13: Sheer Terror / Warrior Kids
       </a>
-      <div class="col-md text-md-end">
+      <div class="col-md-auto text-md-end">
         <a href="?genre=punk,harcore" class="btn btn-info btn-sm mb-1">Punk / Hardcore</a>
         <a href="?location=secret-place" class="btn btn-info btn-sm mb-1">Secret place</a>
         <a href="?max-price=30" class="btn btn-info btn-sm mb-1">&lt;30€</a>
@@ -313,7 +344,7 @@
               <a class="nav-link active" aria-current="page" href=".">Agenda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="."> Appels à volontaires <span class="badge rounded-pill bg-info">7<span
+              <a class="nav-link" href="."> Appels à volontaires <span class="badge rounded-pill bg-info text-dark">7<span
                     class="visually-hidden">
                     appels</span>
                 </span>
