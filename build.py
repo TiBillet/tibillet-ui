@@ -52,6 +52,12 @@ agenda = dict(
 )
 
 
+agenda_event_free = dict(
+    base_url = '../..',
+    page_title = 'Bœuf des Lampions',
+    page_content = read('templates/agenda/event-free/index.html'),
+)
+
 agenda_event = dict(
     base_url = '../..',
     page_title = 'See You In The Pit #13: Sheer Terror / Warrior Kids',
@@ -63,6 +69,7 @@ agenda_event = dict(
 clean_dir('public')
 
 write('public/agenda/index.html', render('templates/base.html', agenda))
+write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
 
 

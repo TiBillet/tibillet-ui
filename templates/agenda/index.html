@@ -33,7 +33,7 @@
       <button class="btn btn-outline-secondary position-relative" type="button" id="button-filters" data-bs-toggle="offcanvas"
         data-bs-target="#filterPanel" aria-controls="filterPanel">
         <i class="bi bi-filter"></i>
-        <span class="position-absolute top-0 start-0 translate-middle p-2 bg-info rounded-circle d-md-none">
+        <span class="js-filter-indicator position-absolute top-0 start-0 translate-middle p-2 bg-info rounded-circle d-md-none">
           <span class="visually-hidden">Filtres actifs</span>
         </span>
 
@@ -134,132 +134,77 @@
 
 <!-- event list -->
 <main class="container-lg">
+  <style>
+    @media (min-width: 768px) {
+      .event-tags {
+        max-width: 50%;
+      }
+    }
+  </style>
+
   <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
-    Mardi 13
+    Vendredi 20 septembre
   </h2>
   <div class="row align-items-center mb-3">
     <div class="col-auto text-center">
-      <h3>17h00</h3>
+      <h3>19h00</h3>
+      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
+    </div>
+    <a href="boeuf-lampions/" class="col fs-5 mb-3">
+      Bœuf des Lampions
+    </a>
+    <div class="col-md-auto text-md-end event-tags">
+      <a href="?type=Scène ouverte,Musique" class="btn btn-info btn-sm mb-1">
+        Scène ouverte / Musique
+      </a>
+      <a href="?location=Café de l'Ampoule,Tiers-Lustre" class="btn btn-info btn-sm mb-1">
+        Café de l'Ampoule @ Tiers-Lustre
+      </a>
+      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?audience=Tous publics" class="btn btn-info btn-sm mb-1">Tous publics</a>
+      <a href="?accessibility=Accès PMR" class="btn btn-info btn-sm mb-1">Accès PMR</a>
+    </div>
+  </div>
+  <hr />
+  <div class="row align-items-center mb-3">
+    <div class="col-auto text-center">
+      <h3>22h00</h3>
       <p class="fs-5 badge bg-secondary-subtle mb-md-0">20/26€</p>
     </div>
     <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
       See You In The Pit #13: Sheer Terror / Warrior Kids
     </a>
     <div class="col-md-auto text-md-end">
+      <a href="?type=Musique" class="btn btn-info btn-sm mb-1">Musique</a>
       <a href="?genre=Punk,Hardcore" class="btn btn-info btn-sm mb-1">Punk / Hardcore</a>
-      <a href="?location=Secret place" class="btn btn-info btn-sm mb-1">Secret place</a>
+      <a href="?location=Friche,Tiers-Lustre" class="btn btn-info btn-sm mb-1">
+        Friche @ Tiers-Lustre
+      </a>
       <a href="?price-cap=30€ max" class="btn btn-info btn-sm mb-1">30€ max</a>
       <a href="?accessibility=PMR" class="btn btn-info btn-sm mb-1">PMR</a>
     </div>
   </div>
+  <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
+    Vendredi 27 septembre
+  </h2>
   <div class="row align-items-center mb-3">
     <div class="col-auto text-center">
       <h3>19h00</h3>
       <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
     </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      Musicale des Beaux-Arts avec Justine Blues Trio
+    <a href="boeuf-lampions/" class="col fs-5 mb-3">
+      Bœuf des Lampions
     </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Blues,Folk" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
-      <a href="?location=Place des Beaux-Arts" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
+    <div class="col-md-auto text-md-end event-tags">
+      <a href="?type=Scène ouverte,Musique" class="btn btn-info btn-sm mb-1">
+        Scène ouverte / Musique
+      </a>
+      <a href="?location=Café de l'Ampoule,Tiers-Lustre" class="btn btn-info btn-sm mb-1">
+        Café de l'Ampoule @ Tiers-Lustre
+      </a>
       <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
-    </div>
-  </div>
-  <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>19h30</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
-    </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      DJ Niko Batik
-    </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Techno" class="btn btn-info btn-sm mb-1">Techno</a>
-      <a href="?location=Coxx" class="btn btn-info btn-sm mb-1">Coxx</a>
-      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
-    </div>
-  </div>
-  <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>20h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
-    </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      Session Jam
-    </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Éclectique"" class="btn btn-info btn-sm mb-1">Éclectique</a>
-      <a href="?location=La Tendresse" class="btn btn-info btn-sm mb-1">La Tendresse</a>
-      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
-    </div>
-  </div>
-  <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
-    Jeudi 15
-  </h2>
-  <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>17h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
-    </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      Musicale des Beaux-Arts avec Justine Blues Trio
-    </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Blues,Folk" class="btn btn-info btn-sm mb-1">Blues / Folk</a>
-      <a href="?location=Place des Beaux-Arts" class="btn btn-info btn-sm mb-1">Place des Beaux-Arts</a>
-      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
-    </div>
-  </div>
-  <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
-    Dimanche 18
-  </h2>
-  <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>18h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
-    </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      Dimanche Swing
-    </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Jazz" class="btn btn-info btn-sm mb-1">Jazz</a>
-      <a href="?location=Le Réservoir" class="btn btn-info btn-sm mb-1">Le Réservoir</a>
-      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
-    </div>
-  </div>
-  <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
-    Jeudi 22
-  </h2>
-  <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>00h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">10€</p>
-    </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      Soirée Clubbing
-    </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Électro" class="btn btn-info btn-sm mb-1">Électro</a>
-      <a href="?location=Antirouille" class="btn btn-info btn-sm mb-1">Antirouille</a>
-      <a href="?price-cbp=10€ max" class="btn btn-info btn-sm mb-1">10€ max</a>
-    </div>
-  </div>
-  <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
-    Dimanche 25
-  </h2>
-  <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>18h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
-    </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      See You In The Pit #14: Lifecrusher / June Gloom / Citrus
-    </a>
-    <div class="col-md text-md-end">
-      <a href="?genre=Noise,Shoegaze" class="btn btn-info btn-sm mb-1">Noise / Shoegaze</a>
-      <a href="?location=Secret place" class="btn btn-info btn-sm mb-1">Secret place</a>
-      <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
+      <a href="?audience=Tous publics" class="btn btn-info btn-sm mb-1">Tous publics</a>
+      <a href="?accessibility=Accès PMR" class="btn btn-info btn-sm mb-1">Accès PMR</a>
     </div>
   </div>
 
