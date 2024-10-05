@@ -25,7 +25,7 @@ def render(path, params):
     return output
 
 def write(path, content):
-    make_dirs(path)
+    os.makedirs(os.path.dirname(path), exist_ok=True)
 
     file = open(path, 'w')
     
@@ -36,9 +36,6 @@ def clean_dir(path):
     if os.path.isdir(path):
         shutil.rmtree(path)
         os.makedirs(path)
-
-def make_dirs(path):
-    os.makedirs(os.path.dirname(path), exist_ok=True)
 
 # page conf
 
