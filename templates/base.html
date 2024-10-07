@@ -18,7 +18,7 @@
 <body>
 
   <!-- navbar -->
-  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <nav class="navbar navbar-expand-xl bg-body-tertiary">
     <div class="container-lg">
       <a class="navbar-brand" href="$base_url/">
         Le Tiers-Lustre
@@ -36,11 +36,11 @@
           </li>
           <li class="nav-item">
             <a class="nav-link $agenda_link" href="$base_url/agenda/">
-              Évènements
+              Agenda
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href=".">Espaces</a>
+            <a class="nav-link" href=".">Réservation d'espaces</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href=".">
@@ -64,8 +64,17 @@
                 <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
                   Tirelire
                   <span class="ms-2">
-                    <span class="badge bg-secondary-subtle">40,25</span> /
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis">40,25</span> /
                     <span class="badge bg-body-tertiary text-body-tertiary">80</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                  Compteur
+                  <span class="ms-2">
+                    <span class="badge bg-secondary-subtle text-secondary-emphasis">3:30</span> /
+                    <span class="badge bg-body-tertiary text-body-tertiary">7:00</span>
                   </span>
                 </a>
               </li>
@@ -142,6 +151,9 @@
               <a class="nav-link" href="#">Tirelire</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="#">Compteur</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#">Adhésions</a>
             </li>
             <li class="nav-item">
@@ -173,6 +185,10 @@
               <i class="bi bi-arrow-right"></i>
               Danzavec'
             </a></li>
+            <li class="nav-item"><a class="nav-link icon-link" href="#">
+              <i class="bi bi-arrow-right"></i>
+              Le Sel de la Vie
+            </a></li>
             <li class="nav-item"><a class="nav-link icon-link link-secondary $agenda_link_class" href="#">
               <i class="bi bi-crosshair"></i>
               Le Tiers-Lustre
@@ -184,10 +200,6 @@
             <li class="nav-item"><a class="nav-link icon-link" href="#">
               <i class="bi bi-arrow-right"></i>
               Sand Witch Sandwich
-            </a></li>
-            <li class="nav-item"><a class="nav-link icon-link" href="#">
-              <i class="bi bi-arrow-right"></i>
-              Le Sel de la Vie
             </a></li>
           </ul>
         </div>
@@ -209,7 +221,6 @@
             digitale, caisse enregistreuse, billetterie en ligne, réseau local,
             le tout libre et auto-hébergeable.
           </p>
-          <p>On ne fais pas de profit sur nos outils, alors profite 😉 (et contribue !)</p>
           <ul class="nav flex-column">
             <li class="nav-item"><a class="nav-link" href="#">TiBillet.org</a></li>
             <li class="nav-item"><a class="nav-link" href="#">Documentation</a></li>
