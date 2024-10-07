@@ -44,7 +44,15 @@ active_link = 'active" aria-current="page'
 tenant = dict(
     base_url = '.',
     page_title = 'Accueil',
-    page_content = read('templates/index.html'),
+    page_content = render('templates/index.html', dict(
+        chantefrein = read('templates/part/chantefrein.html'),
+        bonnie_market = read('templates/part/bonnie-market.html'),
+        danzavec = read('templates/part/danzavec.html'),
+        sel_de_la_vie = read('templates/part/sel-de-la-vie.html'),
+        tiers_lustre = read('templates/part/tiers-lustre.html'),
+        philosoniques = read('templates/part/philosoniques.html'),
+        sand_witch = read('templates/part/sand-witch.html'),
+    )),
     tenant_link = active_link,
 )
 
