@@ -41,11 +41,18 @@ def clean_dir(path):
 
 active_link = 'active" aria-current="page'
 
+tenant = dict(
+    base_url = '.',
+    page_title = 'Accueil',
+    page_content = read('templates/index.html'),
+    tenant_link = active_link,
+)
+
 agenda = dict(
     base_url = '..',
     page_title = 'Agenda',
     page_content = read('templates/agenda/index.html'),
-    agenda_link_class = active_link,
+    agenda_link = active_link,
 )
 
 
@@ -65,6 +72,7 @@ agenda_event = dict(
 
 clean_dir('public')
 
+write('public/index.html', render('templates/base.html', tenant))
 write('public/agenda/index.html', render('templates/base.html', agenda))
 write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
