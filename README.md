@@ -6,7 +6,7 @@ TiBillet v1 interface demo
 
 Pages
 
-- [ ] tenant home
+- [x] tenant home
   - [x] agenda index
     - [x] free event
     - [x] paid event
