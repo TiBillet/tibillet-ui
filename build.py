@@ -44,15 +44,7 @@ active_link = 'active" aria-current="page'
 tenant = dict(
     base_url = '.',
     page_title = 'Accueil',
-    page_content = render('templates/index.html', dict(
-        chantefrein = read('templates/part/chantefrein.html'),
-        bonnie_market = read('templates/part/bonnie-market.html'),
-        danzavec = read('templates/part/danzavec.html'),
-        sel_de_la_vie = read('templates/part/sel-de-la-vie.html'),
-        tiers_lustre = read('templates/part/tiers-lustre.html'),
-        philosoniques = read('templates/part/philosoniques.html'),
-        sand_witch = read('templates/part/sand-witch.html'),
-    )),
+    page_content = read('templates/index.html'),
     tenant_link = active_link,
 )
 
@@ -76,6 +68,21 @@ agenda_event = dict(
     page_content = read('templates/agenda/event/index.html'),
 )
 
+network = dict(
+    base_url = '..',
+    page_title = 'Réseau local',
+    page_content = render('templates/network/index.html', dict(
+        chantefrein = read('templates/part/chantefrein.html'),
+        bonnie_market = read('templates/part/bonnie-market.html'),
+        danzavec = read('templates/part/danzavec.html'),
+        sel_de_la_vie = read('templates/part/sel-de-la-vie.html'),
+        tiers_lustre = read('templates/part/tiers-lustre.html'),
+        philosoniques = read('templates/part/philosoniques.html'),
+        sand_witch = read('templates/part/sand-witch.html'),
+    )),
+    network_link = active_link,
+)
+
 # build
 
 clean_dir('public')
@@ -84,6 +91,7 @@ write('public/index.html', render('templates/base.html', tenant))
 write('public/agenda/index.html', render('templates/base.html', agenda))
 write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
+write('public/reseau/index.html', render('templates/base.html', network))
 
 
 shutil.copytree('assets', 'public/assets')
