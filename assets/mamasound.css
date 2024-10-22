@@ -1,0 +1,11 @@
+:root {
+    --mama-jaune: #F6CD00;
+    --mama-cyan: #1B9ECE;
+    --mama-rose: #E50064;
+    --mama-bleu: #3055A3;
+
+    --h1: 42px 'staatliches' , sans-serif;
+    --h2: 32px 'luciole', sans-serif;
+    --txtcourant: 16px 'luciole', sans-serif;
+    --nav: 16px 'staatliches' , sans-serif;
+}
