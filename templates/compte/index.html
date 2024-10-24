@@ -1,13 +1,13 @@
 <main class="container-lg py-5">
     <ul class="nav nav-tabs mb-0">
         <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href=".">
                 <i class="bi bi-piggy-bank-fill"></i>
                 <span class="d-none d-md-inline">Tirelire</span>
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="./transactions/">
                 <i class="bi bi-cash-coin"></i>
                 <span class="d-none d-md-inline">Transactions</span>
             </a>
@@ -50,13 +50,13 @@
                 <p class="lead flex-fill">
                     <strong>40,25</strong> crédits utilisables avec
                     <em>Le Tiers Lustre</em> <br />
-                    <span class="opacity-75"><strong>80,25</strong> en tout</span>
+                    <span class="opacity-50"><strong>80,25</strong> en tout</span>
                 </p>
 
                 <a href="#" class="btn btn-primary mb-3">
                     Recharger ma tirelire
                 </a>
-                <a href="#" class="btn btn-secondary d-md-none mb-3">
+                <a href="#detail-monnaies" class="btn btn-secondary d-md-none mb-3">
                     Détail des monnaies
                 </a>
             </div>
@@ -65,12 +65,12 @@
                 <p class="lead flex-fill">
                     <strong>03:30</strong> heures échangeables avec
                     <em>Le Tiers Lustre</em> <br />
-                    <span class="opacity-75"><strong>07:00</strong> en tout</span>
+                    <span class="opacity-50"><strong>07:00</strong> en tout</span>
                 </p>
                 <a href="#" class="btn btn-primary mb-3">
                     Déclarer des heures
                 </a>
-                <a href="#" class="btn btn-secondary d-md-none mb-3">
+                <a href="#detail-heures" class="btn btn-secondary d-md-none mb-3">
                     Détail des heures
                 </a>
             </div>
@@ -79,10 +79,10 @@
 
     <div class="row">
         <div class="col-md">
-            <h2 class="pt-3 d-md-none">Détail des monnaies</h2>
+            <h2 class="pt-3 d-md-none" id="detail-monnaies">Détail des monnaies</h2>
             <table class="table">
                 <thead>
-                    <th>Monnaie</th>
+                    <th>Montant</th>
                     <th>Réseau concerné</th>
                     <th>Dernière transaction</th>
                 </thead>
@@ -107,7 +107,7 @@
                         </td>
                         <td>16/03/24</td>
                     </tr>
-                    <tr class="opacity-25">
+                    <tr class="opacity-50">
                         <td>
                             <strong>12</strong>
                             Phonies
@@ -115,9 +115,9 @@
                         <td>
                             <a href="../reseau/">Un Pour Touche</a>
                         </td>
-                        <td>16/03/23</td>
+                        <td>05/01/24</td>
                     </tr>
-                    <tr class="opacity-25">
+                    <tr class="opacity-50">
                         <td>
                             <strong>8</strong>
                             Noisettes
@@ -129,10 +129,10 @@
             </table>
         </div>
         <div class="col-md">
-            <h2 class="pt-3 d-md-none">Détail des heures</h2>
+            <h2 class="pt-3 d-md-none" id="detail-heures">Détail des heures</h2>
             <table class="table">
                 <thead>
-                    <th>Heures</th>
+                    <th>Compte</th>
                     <th>Réseau concerné</th>
                     <th>Dernière transaction</th>
                 </thead>
@@ -147,7 +147,7 @@
                         </td>
                         <td>07/04/24</td>
                     </tr>
-                    <tr class="opacity-25">
+                    <tr class="opacity-50">
                         <td>
                             <strong>03:30</strong>
                             Bûchages

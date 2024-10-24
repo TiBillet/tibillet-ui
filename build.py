@@ -89,6 +89,14 @@ tirelire = dict(
     piggybank_link = active_link,
 )
 
+
+transactions = dict(
+    base_url = '../..',
+    page_title = 'Transactions',
+    page_content = read('templates/compte/transactions/index.html'),
+    transactions_link = active_link,
+)
+
 # build
 
 clean_dir('public')
@@ -99,5 +107,6 @@ write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', a
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
 write('public/reseau/index.html', render('templates/base.html', network))
 write('public/compte/index.html', render('templates/base.html', tirelire))
+write('public/compte/transactions/index.html', render('templates/base.html', transactions))
 
 shutil.copytree('assets', 'public/assets')
