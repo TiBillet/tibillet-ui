@@ -69,54 +69,13 @@
             </label>
           </li>
         </ul>
-        <div class="nav d-flex mb-0">
-          <div class="nav-item dropdown-center">
-            <a class="nav-link dropdown-toggle ps-0 ps-lg-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <i class="bi bi-person-circle"></i>
-              Mon compte
-            </a>
-            <ul class="dropdown-menu dropdown-menu-lg-end">
-              <li class="dropdown-header"><code>jdulac@exemple.fr</code></li>
-              <li>
-                <a class="dropdown-item $piggybank_link" href="$base_url/account/">
-                  <i class="bi bi-piggy-bank-fill"></i>
-                  Tirelire
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item $bookings_link" href="$base_url/account/bookings/">
-                  <i class="bi bi-person-badge-fill"></i>
-                  Adhésions
-                </a>
-              </li>
-              <!-- <li>
-                <a class="dropdown-item" href=".">
-                  <i class="bi bi-ticket-perforated-fill"></i>
-                  Réservations
-                </a>
-              </li> -->
-              <li>
-                <a class="dropdown-item" href="#">
-                  <i class="bi bi-stopwatch-fill"></i>
-                  Badgeuse
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <i class="bi bi-gear-fill"></i>
-                  Préférences
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
-                  <i class="bi bi-box-arrow-right"></i>
-                  Me déconnecter
-                </a>
-              </li>
-            </ul>
+        <div class="navbar-nav d-flex mb-0">
+          <div class="nav-item">
+              <a class="nav-link $piggybank_link" href="$base_url/compte/">
+                <i class="bi bi-person-circle"></i>
+                Mon compte
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -158,27 +117,9 @@
             </li>
           </ul>
           <hr>
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link $piggybank_link" href="$base_url/account/">Tirelire</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link $bookings_link" href="$base_url/account/bookings/">Adhésions</a>
-            </li>
-            <!-- <li class="nav-item">
-              <a class="nav-link" href=".">Réservations</a>
-            </li> -->
-            <li class="nav-item">
-              <a class="nav-link" href="#">Badgeuse</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Préférences</a>
-            </li>
-          </ul>
-          <hr>
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Me déconnecter</a>
+              <a class="nav-link $piggybank_link" href="$base_url/compte/">Mon compte</a>
             </li>
           </ul>
         </div>

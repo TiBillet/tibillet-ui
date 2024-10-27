@@ -89,10 +89,10 @@ piggybank = dict(
     piggybank_link = active_link,
 )
 
-bookings = dict(
+subscriptions = dict(
     base_url = '../..',
     page_title = 'Adhésions',
-    page_content = read('templates/account/bookings/index.html'),
+    page_content = read('templates/account/subscriptions/index.html'),
     bookings_link = active_link,
 )
 
@@ -105,7 +105,7 @@ write('public/agenda/index.html', render('templates/base.html', agenda))
 write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
 write('public/reseau/index.html', render('templates/base.html', network))
-write('public/account/index.html', render('templates/base.html', piggybank))
-write('public/account/bookings/index.html', render('templates/base.html', bookings))
+write('public/compte/index.html', render('templates/base.html', piggybank))
+write('public/compte/adhesions/index.html', render('templates/base.html', subscriptions))
 
 shutil.copytree('assets', 'public/assets')
