@@ -15,14 +15,9 @@ def read(path):
     return content
 
 def render(path, params):
-    output = ''
+    tpl = Template(read(path))
 
-    with open(path, 'r') as f:
-        src = Template(f.read())
-        result = src.safe_substitute(params)
-        output += result
-    
-    return output
+    return tpl.safe_substitute(params)
 
 def write(path, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -103,6 +98,20 @@ subscriptions = dict(
     subscriptions_link = active_link,
 )
 
+punchclock = dict(
+    base_url = '../..',
+    page_title = 'Badgeuse',
+    page_content = read('templates/account/punchclock/index.html'),
+    punchclock_link = active_link,
+)
+
+settings = dict(
+    base_url = '../..',
+    page_title = 'Préférences',
+    page_content = read('templates/account/settings/index.html'),
+    settings_link = active_link,
+)
+
 # build
 
 clean_dir('public')
@@ -114,5 +123,7 @@ write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.h
 write('public/reseau/index.html', render('templates/base.html', network))
 write('public/compte/index.html', render_account(piggybank))
 write('public/compte/adhesions/index.html', render_account(subscriptions))
+write('public/compte/badgeuse/index.html', render_account(punchclock))
+write('public/compte/preferences/index.html', render_account(settings))
 
 shutil.copytree('assets', 'public/assets')

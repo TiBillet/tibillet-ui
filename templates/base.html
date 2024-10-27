@@ -12,7 +12,7 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="$base_url/assets/vars.css">
   <link rel="stylesheet" href="$base_url/assets/base.css">
-  <script type="module" src="$base_url/assets/js/theme-switcher.js"></script>
+  <script type="module" async src="$base_url/assets/js/theme-switcher.js"></script>
 </head>
 
 <body class="min-vh-100 d-flex flex-column">
@@ -29,11 +29,11 @@
       </button>
       <div class="collapse navbar-collapse" id="mainMenu">
         <ul class="navbar-nav me-auto">
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link $tenant_link" href="$base_url/">
               Accueil
             </a>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link $agenda_link" href="$base_url/agenda/">
               Agenda
@@ -54,19 +54,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href=".">Aide et contact</a>
-          </li>
-          <li class="nav-item d-flex align-self-baseline align-self-xl-center justify-content-center text-secondary mx-xl-3">
-            <label class="form-check-label" for="themeToggle">
-              <i class="bi bi-sun-fill"></i>
-              <span class="visually-hidden">Thème clair</span>
-            </label>
-            <div class="form-check form-switch ms-2">
-              <input class="form-check-input" type="checkbox" role="switch" id="themeToggle">
-            </div>
-            <label class="form-check-label" for="themeToggle">
-              <i class="bi bi-moon-fill"></i>
-              <span class="visually-hidden">Thème sombre</span>
-            </label>
           </li>
         </ul>
         <div class="navbar-nav d-flex mb-0">
