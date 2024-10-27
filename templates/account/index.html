@@ -7,23 +7,17 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="./transactions/">
-                <i class="bi bi-cash-coin"></i>
-                <span class="d-none d-md-inline">Transactions</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="./bookings/">
                 <i class="bi bi-person-badge-fill"></i>
                 <span class="d-none d-md-inline">Adhésions</span>
             </a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link" href="#">
                 <i class="bi bi-ticket-perforated-fill"></i>
                 <span class="d-none d-md-inline">Réservations</span>
             </a>
-        </li>
+        </li> -->
         <li class="nav-item">
             <a class="nav-link" href="#">
                 <i class="bi bi-stopwatch-fill"></i>
@@ -42,8 +36,8 @@
             <h1 class="card-title d-md-none">Tirelire</h1>
             <p class="lead">
                 Ici je retrouve mon solde TiBillet et mes heures déclarées.
-                Certaines monnaies ou monnaie-heures peuvent ne pas être
-                utilisables ici.
+                Certaines monnaies ou monnaie-heures peuvent n'être utilisables
+                qu'ailleurs.
             </p>
         </div>
         <div class="row g-0">
@@ -52,13 +46,13 @@
                 <p class="lead flex-fill">
                     <strong>40,25</strong> tibillets utilisables avec
                     <em>Le Tiers Lustre</em> <br />
-                    <span class="opacity-50"><strong>80,25</strong> en tout</span>
+                    <span class="opacity-50"><strong>80,25</strong> tibillets en tout</span>
                 </p>
 
                 <a href="#" class="btn btn-primary mb-3">
                     Recharger ma tirelire
                 </a>
-                <a href="#detail-monnaies" class="btn btn-secondary d-md-none mb-3">
+                <a href="#detail-monnaies" class="btn btn-secondary d-md-none">
                     Détail des monnaies
                 </a>
             </div>
@@ -67,12 +61,12 @@
                 <p class="lead flex-fill">
                     <strong>03:30</strong> heures échangeables avec
                     <em>Le Tiers Lustre</em> <br />
-                    <span class="opacity-50"><strong>07:00</strong> en tout</span>
+                    <span class="opacity-50"><strong>07:00</strong> heures en tout</span>
                 </p>
                 <a href="#" class="btn btn-primary mb-3">
                     Déclarer des heures
                 </a>
-                <a href="#detail-heures" class="btn btn-secondary d-md-none mb-3">
+                <a href="#detail-heures" class="btn btn-secondary d-md-none">
                     Détail des heures
                 </a>
             </div>
@@ -84,7 +78,7 @@
             <h2 class="pt-3 d-md-none" id="detail-monnaies">Détail des monnaies</h2>
             <table class="table">
                 <thead>
-                    <th>Montant</th>
+                    <th>Solde</th>
                     <th>Réseau concerné</th>
                     <th>Dernière transaction</th>
                 </thead>
@@ -144,7 +138,7 @@
             <h2 class="pt-3 d-md-none" id="detail-heures">Détail des heures</h2>
             <table class="table">
                 <thead>
-                    <th>Compte</th>
+                    <th>Solde</th>
                     <th>Réseau concerné</th>
                     <th>Dernière transaction</th>
                 </thead>
@@ -170,6 +164,39 @@
                 </tbody>
             </table>
         </div>
+    </div>
+
+    <p class="py-3 text-center">
+        <a href="#" class="btn btn-outline-primary d-block d-sm-inline">
+            Historique des transactions
+        </a>
+    </p>
+
+    <h2 class="pt-3 d-none">Historique des transactions</h2>
+    <div class="table-responsive d-none">
+        <table class="table">
+            <thead>
+                <th>Montant</th>
+                <th>Action</th>
+                <th>Chemin</th>
+                <th>Date</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <strong>30</strong>
+                        Étincelles
+                    </td>
+                    <td>Recharge</td>
+                    <td>
+                        Carte bancaire
+                        <i class="bi bi-arrow-right"></i>
+                        Tirelire
+                    </td>
+                    <td>12/03/24</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
     
 </main>

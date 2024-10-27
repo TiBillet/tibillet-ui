@@ -82,19 +82,18 @@ network = dict(
     network_link = active_link,
 )
 
-tirelire = dict(
+piggybank = dict(
     base_url = '..',
     page_title = 'Tirelire',
-    page_content = read('templates/compte/index.html'),
+    page_content = read('templates/account/index.html'),
     piggybank_link = active_link,
 )
 
-
-transactions = dict(
+bookings = dict(
     base_url = '../..',
-    page_title = 'Transactions',
-    page_content = read('templates/compte/transactions/index.html'),
-    transactions_link = active_link,
+    page_title = 'Adhésions',
+    page_content = read('templates/account/bookings/index.html'),
+    bookings_link = active_link,
 )
 
 # build
@@ -106,7 +105,7 @@ write('public/agenda/index.html', render('templates/base.html', agenda))
 write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
 write('public/reseau/index.html', render('templates/base.html', network))
-write('public/compte/index.html', render('templates/base.html', tirelire))
-write('public/compte/transactions/index.html', render('templates/base.html', transactions))
+write('public/account/index.html', render('templates/base.html', piggybank))
+write('public/account/bookings/index.html', render('templates/base.html', bookings))
 
 shutil.copytree('assets', 'public/assets')

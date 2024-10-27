@@ -78,29 +78,23 @@
             <ul class="dropdown-menu dropdown-menu-lg-end">
               <li class="dropdown-header"><code>jdulac@exemple.fr</code></li>
               <li>
-                <a class="dropdown-item $piggybank_link" href="$base_url/compte/">
+                <a class="dropdown-item $piggybank_link" href="$base_url/account/">
                   <i class="bi bi-piggy-bank-fill"></i>
                   Tirelire
                 </a>
               </li>
               <li>
-                <a class="dropdown-item $transactions_link" href="$base_url/compte/transactions/">
-                  <i class="bi bi-cash-coin"></i>
-                  Transactions
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item $bookings_link" href="$base_url/account/bookings/">
                   <i class="bi bi-person-badge-fill"></i>
                   Adhésions
                 </a>
               </li>
-              <li>
+              <!-- <li>
                 <a class="dropdown-item" href=".">
                   <i class="bi bi-ticket-perforated-fill"></i>
                   Réservations
                 </a>
-              </li>
+              </li> -->
               <li>
                 <a class="dropdown-item" href="#">
                   <i class="bi bi-stopwatch-fill"></i>
@@ -166,17 +160,14 @@
           <hr>
           <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="#">Tirelire</a>
+              <a class="nav-link $piggybank_link" href="$base_url/account/">Tirelire</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Transactions</a>
+              <a class="nav-link $bookings_link" href="$base_url/account/bookings/">Adhésions</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Adhésions</a>
-            </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
               <a class="nav-link" href=".">Réservations</a>
-            </li>
+            </li> -->
             <li class="nav-item">
               <a class="nav-link" href="#">Badgeuse</a>
             </li>
