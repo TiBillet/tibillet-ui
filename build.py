@@ -15,14 +15,9 @@ def read(path):
     return content
 
 def render(path, params):
-    output = ''
+    tpl = Template(read(path))
 
-    with open(path, 'r') as f:
-        src = Template(f.read())
-        result = src.safe_substitute(params)
-        output += result
-    
-    return output
+    return tpl.safe_substitute(params)
 
 def write(path, content):
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -55,7 +50,6 @@ agenda = dict(
     agenda_link = active_link,
 )
 
-
 agenda_event_free = dict(
     base_url = '../..',
     page_title = 'Bœuf des Lampions',
@@ -83,6 +77,41 @@ network = dict(
     network_link = active_link,
 )
 
+def render_account(params):
+    account_page = render('templates/account/base.html', params)
+
+    params['page_content'] = account_page
+
+    return render('templates/base.html', params)
+
+piggybank = dict(
+    base_url = '..',
+    page_title = 'Tirelire',
+    page_content = read('templates/account/index.html'),
+    piggybank_link = active_link,
+)
+
+subscriptions = dict(
+    base_url = '../..',
+    page_title = 'Adhésions',
+    page_content = read('templates/account/subscriptions/index.html'),
+    subscriptions_link = active_link,
+)
+
+punchclock = dict(
+    base_url = '../..',
+    page_title = 'Badgeuse',
+    page_content = read('templates/account/punchclock/index.html'),
+    punchclock_link = active_link,
+)
+
+settings = dict(
+    base_url = '../..',
+    page_title = 'Préférences',
+    page_content = read('templates/account/settings/index.html'),
+    settings_link = active_link,
+)
+
 # build
 
 clean_dir('public')
@@ -92,6 +121,9 @@ write('public/agenda/index.html', render('templates/base.html', agenda))
 write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
 write('public/reseau/index.html', render('templates/base.html', network))
-
+write('public/compte/index.html', render_account(piggybank))
+write('public/compte/adhesions/index.html', render_account(subscriptions))
+write('public/compte/badgeuse/index.html', render_account(punchclock))
+write('public/compte/preferences/index.html', render_account(settings))
 
 shutil.copytree('assets', 'public/assets')

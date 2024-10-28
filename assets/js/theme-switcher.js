@@ -2,13 +2,14 @@
 
 const query = window.matchMedia('(prefers-color-scheme: dark)')
 const target = document.querySelector('html')
-const toggle = document.querySelector('#themeToggle')
+const toggle = document.querySelector('#darkThemeCheck')
 
 const refresh = ({ matches }) => {
     let theme = localStorage.getItem('theme') || (matches ? 'dark' : 'light')
     
     target.dataset.bsTheme = theme
-    toggle.checked = theme === 'dark'
+    
+    if (toggle) toggle.checked = theme === 'dark'
 }
 
 const update = ({ target: { checked }}) => {
