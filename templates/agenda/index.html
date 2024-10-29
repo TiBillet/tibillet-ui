@@ -32,7 +32,7 @@
     <div class="input-group input-group-lg">
       <button class="btn btn-outline-secondary position-relative" type="button" id="button-filters" data-bs-toggle="offcanvas"
         data-bs-target="#filterPanel" aria-controls="filterPanel">
-        <i class="bi bi-filter"></i>
+        <i class="bi bi-funnel"></i>
         <span class="js-filter-indicator position-absolute top-0 start-0 translate-middle p-2 bg-info rounded-circle d-md-none">
           <span class="visually-hidden">Filtres actifs</span>
         </span>
@@ -126,7 +126,8 @@
         </label>
       </div>
       <div class="position-absolute bottom-0 start-0 end-0 p-3 ">
-        <a href="." class="btn btn-primary d-block">Valider</a>
+        <a href="." class="btn btn-primary d-block mb-3">Valider</a>
+        <a href="." class="btn btn-danger d-block">Effacer</a>
       </div>
     </div>
   </div>
@@ -134,31 +135,36 @@
 
 <!-- event list -->
 <main class="container-lg">
-  <style>
-    @media (min-width: 768px) {
-      .event-tags {
-        max-width: 50%;
-      }
-    }
-  </style>
 
   <h2 class="fs-5 p-3 text-dark" style="background: var(--mayaj-pons);">
     Vendredi 20 septembre
   </h2>
   <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>19h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
+    <div class="col-md-auto">
+      <h3 class="mb-0 mt-2 mt-md-0">19h00</h3>
+      <!-- <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p> -->
     </div>
-    <a href="boeuf-lampions/" class="col fs-5 mb-3">
+    <div class="col-auto">
+      <img style="background-color: var(--kouler-losean)"
+        src="../assets/motif/sevronkler.svg"
+        class="d-block w-100 h-100 my-3 rounded"
+        alt="...">
+    </div>
+    <a href="boeuf-lampions/" class="col fs-5">
       Bœuf des Lampions
     </a>
     <div class="col-md-auto text-md-end event-tags">
-      <a href="?type=Scène ouverte,Musique" class="btn btn-info btn-sm mb-1">
-        Scène ouverte / Musique
+      <a href="?type=Scène ouverte" class="btn btn-info btn-sm mb-1">
+        Scène ouverte
       </a>
-      <a href="?location=Café de l'Ampoule,Tiers-Lustre" class="btn btn-info btn-sm mb-1">
-        Café de l'Ampoule @ Tiers-Lustre
+      <a href="?type=Musique" class="btn btn-info btn-sm mb-1">
+        Musique
+      </a>
+      <a href="?location=Café de l'Ampoule" class="btn btn-info btn-sm mb-1">
+        Café de l'Ampoule
+      </a>
+      <a href="?location=Tiers-Lustre" class="btn btn-info btn-sm mb-1">
+        Tiers-Lustre
       </a>
       <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
       <a href="?audience=Tous publics" class="btn btn-info btn-sm mb-1">Tous publics</a>
@@ -167,18 +173,26 @@
   </div>
   <hr />
   <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>22h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">20/26€</p>
+    <div class="col-md-auto">
+      <h3 class="mb-0 mt-2 mt-md-0">22h00</h3>
+      <!-- <p class="fs-5 badge bg-secondary-subtle mb-md-0">20/26€</p> -->
     </div>
-    <a href="see-you-in-the-pit-13/" class="col fs-5 mb-3">
-      See You In The Pit #13: Sheer Terror / Warrior Kids
+    <div class="col-auto">
+      <img style="background-color: var(--kouler-losean)"
+        src="../assets/motif/sevronkler.svg"
+        class="d-block w-100 h-100 my-3 rounded"
+        alt="...">
+    </div>
+    <a href="see-you-in-the-pit-13/" class="col fs-5">
+      See You In The Pit #13
+      <span class="d-none d-lg-inline">: Sheer Terror / Warrior Kids</span>
     </a>
     <div class="col-md-auto text-md-end event-tags">
       <a href="?type=Musique" class="btn btn-info btn-sm mb-1">Musique</a>
-      <a href="?genre=Punk,Hardcore" class="btn btn-info btn-sm mb-1">Punk / Hardcore</a>
-      <a href="?location=Friche,Tiers-Lustre" class="btn btn-info btn-sm mb-1">
-        Friche @ Tiers-Lustre
+      <a href="?genre=Punk" class="btn btn-info btn-sm mb-1">Punk</a>
+      <a href="?genre=Hardcore" class="btn btn-info btn-sm mb-1">Hardcore</a>
+      <a href="?location=Friche du Tiers-Lustre" class="btn btn-info btn-sm mb-1">
+        Friche du Tiers-Lustre
       </a>
       <a href="?price-cap=30€ max" class="btn btn-info btn-sm mb-1">30€ max</a>
       <a href="?accessibility=PMR" class="btn btn-info btn-sm mb-1">PMR</a>
@@ -188,19 +202,31 @@
     Vendredi 27 septembre
   </h2>
   <div class="row align-items-center mb-3">
-    <div class="col-auto text-center">
-      <h3>19h00</h3>
-      <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p>
+    <div class="col-md-auto">
+      <h3 class="mb-0 mt-2 mt-md-0">19h00</h3>
+      <!-- <p class="fs-5 badge bg-secondary-subtle mb-md-0">Gratuit</p> -->
     </div>
-    <a href="boeuf-lampions/" class="col fs-5 mb-3">
+    <div class="col-auto">
+      <img style="background-color: var(--kouler-losean)"
+        src="../assets/motif/sevronkler.svg"
+        class="d-block w-100 h-100 my-3 rounded"
+        alt="...">
+    </div>
+    <a href="boeuf-lampions/" class="col fs-5">
       Bœuf des Lampions
     </a>
     <div class="col-md-auto text-md-end event-tags">
-      <a href="?type=Scène ouverte,Musique" class="btn btn-info btn-sm mb-1">
-        Scène ouverte / Musique
+      <a href="?type=Scène ouverte" class="btn btn-info btn-sm mb-1">
+        Scène ouverte
       </a>
-      <a href="?location=Café de l'Ampoule,Tiers-Lustre" class="btn btn-info btn-sm mb-1">
-        Café de l'Ampoule @ Tiers-Lustre
+      <a href="?type=Musique" class="btn btn-info btn-sm mb-1">
+        Musique
+      </a>
+      <a href="?location=Café de l'Ampoule" class="btn btn-info btn-sm mb-1">
+        Café de l'Ampoule
+      </a>
+      <a href="?location=Tiers-Lustre" class="btn btn-info btn-sm mb-1">
+        Tiers-Lustre
       </a>
       <a href="?price-cap=Gratuit" class="btn btn-info btn-sm mb-1">Gratuit</a>
       <a href="?audience=Tous publics" class="btn btn-info btn-sm mb-1">Tous publics</a>
@@ -208,7 +234,7 @@
     </div>
   </div>
 
-  <p class="py-3 text-center">
+  <p class="py-3 mb-5 text-center">
     <a href="#" class="btn btn-outline-primary d-block d-sm-inline">Plus d'évènements</a>
   </p>
 </main>

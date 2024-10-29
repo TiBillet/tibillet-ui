@@ -3,38 +3,44 @@
         <h1 class="card-title d-md-none">Tirelire</h1>
         <p class="lead">
             Ici je retrouve mon solde TiBillet et mes heures déclarées.
-            Certaines monnaies ou monnaie-heures peuvent n'être utilisables
+            Certaines monnaies ou monnaie-temps peuvent n'être utilisables
             qu'ailleurs.
         </p>
     </div>
     <div class="row g-0">
-        <div class="col-md bg-body-tertiary p-3 d-flex flex-column">
+        <div class="col-md bg-body-tertiary p-3">
             <h3>Monnaies</h3>
-            <p class="lead flex-fill">
+            <p class="lead">
                 <strong>40,25</strong> tibillets utilisables avec
                 <em>Le Tiers Lustre</em> <br />
                 <span class="opacity-50"><strong>80,25</strong> tibillets en tout</span>
             </p>
 
-            <a href="#" class="btn btn-primary mb-3">
+            <a href="#" class="btn btn-primary d-block mb-3">
                 Recharger ma tirelire
             </a>
-            <a href="#detail-monnaies" class="btn btn-secondary d-md-none">
+            <a href="#detail-monnaies" class="btn btn-secondary d-block mb-3 d-md-none">
                 Détail des monnaies
             </a>
+            <a href="#detail-monnaies" class="btn btn-secondary d-block mb-3">
+                Demander le remboursement
+            </a>
+            <p class="opacity-50 m-0">Seuls les tibillets sont remboursables en
+                ligne. Pour les monnaies locales, demandez directement à une
+                caisse de votre réseau local.</p>
         </div>
-        <div class="col-md bg-body-tertiary p-3 d-flex flex-column">
+        <div class="col-md bg-body-tertiary p-3">
             <h3>Temps</h3>
-            <p class="lead flex-fill">
+            <p class="lead">
                 <strong>03:30</strong> heures échangeables avec
                 <em>Le Tiers Lustre</em> <br />
                 <span class="opacity-50"><strong>07:00</strong> heures en tout</span>
             </p>
-            <a href="#" class="btn btn-primary mb-3">
+            <a href="#" class="btn btn-primary d-block mb-3">
                 Déclarer des heures
             </a>
-            <a href="#detail-heures" class="btn btn-secondary d-md-none">
-                Détail des heures
+            <a href="#detail-heures" class="btn btn-secondary d-block d-md-none">
+                Détail du temps
             </a>
         </div>
     </div>
@@ -42,7 +48,7 @@
 
 <div class="row">
     <div class="col-md">
-        <h2 class="pt-3 d-md-none" id="detail-monnaies">Détail des monnaies</h2>
+        <h2 class="pt-3" id="detail-monnaies">Détail des monnaies</h2>
         <table class="table">
             <thead>
                 <th>Solde</th>
@@ -102,7 +108,7 @@
         </table>
     </div>
     <div class="col-md">
-        <h2 class="pt-3 d-md-none" id="detail-heures">Détail des heures</h2>
+        <h2 class="pt-3" id="detail-heures">Détail du temps</h2>
         <table class="table">
             <thead>
                 <th>Solde</th>
