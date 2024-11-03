@@ -62,6 +62,13 @@ agenda_event = dict(
     page_content = read('templates/agenda/event/index.html'),
 )
 
+subscribe = dict(
+    base_url = '../..',
+    page_title = 'Adhérer au réseau',
+    page_content = read('templates/subscribe/index.html'),
+    subscribe_link = active_link,
+)
+
 network = dict(
     base_url = '..',
     page_title = 'Réseau local',
@@ -105,6 +112,13 @@ punchclock = dict(
     punchclock_link = active_link,
 )
 
+card = dict(
+    base_url = '../..',
+    page_title = 'Carte',
+    page_content = read('templates/account/card/index.html'),
+    card_link = active_link,
+)
+
 settings = dict(
     base_url = '../..',
     page_title = 'Préférences',
@@ -120,10 +134,12 @@ write('public/index.html', render('templates/base.html', tenant))
 write('public/agenda/index.html', render('templates/base.html', agenda))
 write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', agenda_event_free))
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
+write('public/adherer/index.html', render('templates/base.html', subscribe))
 write('public/reseau/index.html', render('templates/base.html', network))
 write('public/compte/index.html', render_account(piggybank))
 write('public/compte/adhesions/index.html', render_account(subscriptions))
 write('public/compte/badgeuse/index.html', render_account(punchclock))
+write('public/compte/carte/index.html', render_account(card))
 write('public/compte/preferences/index.html', render_account(settings))
 
 shutil.copytree('assets', 'public/assets')
