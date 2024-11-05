@@ -63,7 +63,7 @@ agenda_event = dict(
 )
 
 subscribe = dict(
-    base_url = '../..',
+    base_url = '..',
     page_title = 'Adhérer au réseau',
     page_content = read('templates/subscribe/index.html'),
     subscribe_link = active_link,
