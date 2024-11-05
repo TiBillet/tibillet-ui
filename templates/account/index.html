@@ -7,6 +7,47 @@
             qu'ailleurs.
         </p>
     </div>
+
+     <!-- refund panel -->
+     <div class="offcanvas-start offcanvas" tabindex="-1" id="refundPanel" aria-labelledby="refundPanelLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="refundPanelLabel">Demander le remboursement</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <div class="alert  alert-primary" role="alert">
+                <h4>Pas de  panique ! Vous avez le temps…</h4>
+                <p>
+                    TiBillet fonctionne sur un
+                    principe de "<a href="#">monnaie fondante</a>". Vous avez 18
+                    mois après votre dernière utilisation du Pass pour récupérer le reste de
+                    crédits non utilisés. On vous renverra un mail un mois avant si
+                    vous avez oublié.
+                </p>
+                <p>
+                    Vous pouvez aussi en faire don au collectif
+                    qui vous a fourni la carte.
+                </p>
+                <p>
+                    Le Pass et votre compte, eux, sont
+                    valables à vie !
+                </p>
+            </div>
+
+            <div class="position-absolute bottom-0 start-0 end-0 p-3">
+                <p class="lead">
+                    Confirmer la demande de remboursement de 23 euros ?
+                </p>
+                
+                <a href="." class="btn btn-primary d-block mb-3">Confirmer</a>
+                <a href="." class="btn btn-secondary d-block mb-3">
+                    Faire don de ma tirelire au Tiers-Lustre
+                </a>
+                <a href="." class="btn btn-danger d-block">Annuler</a>
+            </div>
+        </div>
+    </div>
+
     <div class="row g-0">
         <div class="col-md bg-body-tertiary p-3">
             <h3>Monnaies</h3>
@@ -22,9 +63,16 @@
             <a href="#detail-monnaies" class="btn btn-secondary d-block mb-3 d-md-none">
                 Détail des monnaies
             </a>
-            <a href="#detail-monnaies" class="btn btn-secondary d-block mb-3">
-                Demander le remboursement
-            </a>
+
+            <button
+                class="btn btn-secondary w-100 mb-3"
+                type="button"
+                id="button-filters"
+                data-bs-toggle="offcanvas"
+                data-bs-target="#refundPanel"
+                aria-controls="refundPanel">
+                Demander le remboursement (3 mois restants)
+            </button>
             <p class="opacity-50 m-0">Seuls les tibillets sont remboursables en
                 ligne. Pour les monnaies locales, demandez directement à une
                 caisse de votre réseau local.</p>

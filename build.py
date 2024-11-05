@@ -84,6 +84,11 @@ network = dict(
     network_link = active_link,
 )
 
+register = dict(
+    base_url = '..',
+    page_title = 'Associer ma carte',
+)
+
 def render_account(params):
     account_page = render('templates/account/base.html', params)
 
@@ -136,6 +141,7 @@ write('public/agenda/boeuf-lampions/index.html', render('templates/base.html', a
 write('public/agenda/see-you-in-the-pit-13/index.html', render('templates/base.html', agenda_event))
 write('public/adherer/index.html', render('templates/base.html', subscribe))
 write('public/reseau/index.html', render('templates/base.html', network))
+write('public/inscription/index.html', render('templates/register/index.html', register))
 write('public/compte/index.html', render_account(piggybank))
 write('public/compte/adhesions/index.html', render_account(subscriptions))
 write('public/compte/badgeuse/index.html', render_account(punchclock))
